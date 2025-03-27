@@ -15,28 +15,17 @@
         :root {
             --cf-orange: #f6821f;
             --cf-blue: #003682;
-            --cf-light-blue: #2c7cb0;
         }
         
         body {
-            background-color: #f8f9fa;
+            background-color: #fff5eb;
             color: #333;
             font-family: 'Arial', sans-serif;
             padding-bottom: 40px;
         }
         
-        .header-table {
-            margin-top: 30px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .tooltip-inner {
-            max-width: 300px;
-            text-align: left;
-        }
-        
         .navbar {
-            background-color: var(--cf-blue);
+            background-color: var(--cf-orange);
         }
         
         .navbar-brand {
@@ -45,77 +34,57 @@
         }
         
         .hero-section {
-            background: linear-gradient(135deg, var(--cf-blue) 0%, var(--cf-light-blue) 100%);
+            background-color: var(--cf-orange);
             color: white;
             padding: 50px 0;
             margin-bottom: 30px;
             border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 15px rgba(246, 130, 31, 0.2);
         }
-        
-        .waf-status-card {
-            margin-bottom: 30px;
-            border: none;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .header-name {
-            font-weight: bold;
-            color: var(--cf-blue);
-        }
-        
-        .header-explanation {
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .footer {
-            margin-top: 40px;
-            padding: 20px 0;
-            background-color: #f1f1f1;
-            text-align: center;
-        }
-        
-        .cf-logo {
-            height: 40px;
-        }
-        
-        .table-header {
-            background-color: var(--cf-blue);
-            color: white;
-        }
-        
-        .country-flag {
-            width: 3em;
-            height: 2em;
+
+        .cf-logo-nav {
+            height: 30px;
             margin-right: 10px;
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-            border-radius: 4px;
         }
-        
-        .country-display {
-            display: flex;
+
+        /* Button Styles */
+        .btn-base, .report-btn, .bypass-btn {
+            padding: 6px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
             align-items: center;
         }
-        
-        .status-badge {
-            display: inline-block;
-            padding: 6px 12px;
-            border-radius: 30px;
-            font-weight: bold;
-            margin-right: 10px;
+
+        .btn-base i, .report-btn i, .bypass-btn i {
+            margin-right: 5px;
         }
-        
-        /* Add responsive text classes */
-        .text-break {
-            word-break: break-word !important;
-            word-wrap: break-word !important;
+
+        .report-btn {
+            color: white;
+            border: 2px solid white;
         }
-        
-        /* Table responsive styles */
-        .table-responsive {
-            width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
+
+        .report-btn:hover {
+            background-color: white;
+            color: var(--cf-orange);
+            text-decoration: none;
+        }
+
+        .bypass-btn {
+            color: var(--cf-blue);
+            border: 2px solid var(--cf-blue);
+            background-color: white;
+        }
+
+        .bypass-btn:hover {
+            background-color: var(--cf-blue);
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -124,18 +93,33 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <!-- Cloudflare logo as text for simplicity -->
-                <span class="cf-logo-text">Cloudflare</span> | Technical Project
+                <img src="../cfassets/cf-logo-v-rgb.png" alt="Cloudflare Logo" class="cf-logo-nav">
+                Technical Project
             </a>
+            <div class="ms-auto d-flex align-items-center">
+                <a href="/proxy.php" class="bypass-btn" target="_blank">
+                    <i class="fas fa-shield-alt"></i>Access Part 2
+                </a>
+                <a href="https://blog.johannrajadurai.com/report1" class="report-btn" target="_blank">
+                    <i class="fas fa-file-alt"></i>Report 1
+                </a>
+                <a href="https://blog.johannrajadurai.com/report2" class="report-btn" target="_blank">
+                    <i class="fas fa-file-alt"></i>Report 2
+                </a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <div class="hero-section">
         <div class="container-fluid">
-            <h1><i class="fas fa-cloud"></i> Hi Solutions Engineering Team!</h1>
-            <p class="lead">My name is Johann Rajadurai, and this is my deliverable for Part 1 of the technical project.</p>
-            <p>This application demonstrates the headers received by the origin server and showcases WAF functionality based on geographic location.</p>
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <h1><i class="fas fa-cloud"></i> Hi Solutions Engineering Team!</h1>
+                    <p class="lead">My name is Johann Rajadurai, and this is my deliverable for Part 1 of the technical project.</p>
+                    <p>This application demonstrates the headers received by the origin server and showcases WAF functionality based on geographic location.</p>
+                </div>
+            </div>
         </div>
     </div>
 
