@@ -1,6 +1,6 @@
 # Cloudflare Solutions Engineering Technical Project
 
-[johannrajadurai.com](johannrajadurai.com)
+[johannrajadurai.com](https://johannrajadurai.com)
 
 This repository contains my deliverable for Part 1 of the Cloudflare Solutions Engineering Technical Project.
 
