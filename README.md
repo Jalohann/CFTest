@@ -2,7 +2,7 @@
 
 [johannrajadurai.com](https://johannrajadurai.com)
 
-This repository contains my deliverable for Part 1 of the Cloudflare Solutions Engineering Technical Project.
+This repository contains my deliverable for Part 1 and Part 2 of the Cloudflare Solutions Engineering Technical Project.
 
 ## Project Overview
 
